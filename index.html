@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SkyBridge Logistics</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style1.css" rel="stylesheet"> -->
+</head>
+
+<style>
+
+
+body{
+    overflow-x: hidden !important;
+}
+
+div{
+    overflow-x: hidden !important;
+}
+
+.swal2-popup{
+            width:50rem !important;
+        }
+
+        /* p {
+        margin: 3px 0;
+        line-height: 1;
+    } */
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+font-family: "Roboto", sans-serif;
+}
+
+.copyright__part{
+padding: 10px 20px;
+/* background: #000000; */
+text-align: center;
+font-weight: 300;
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+.copyright__part a{
+font-size: 14px;
+text-decoration: none;
+color: #ffffff;
+}
+
+
+/*feature css starts*/
+.timeline__cover{
+/* background: #262e2b; */
+padding: 0px 0;
+color: #262e2b;
+}
+.timeline__cover .timeline__title{
+max-width: 840px;
+margin: 0 auto;
+text-align: center;
+padding: 0 16px;
+}
+.timeline__cover .timeline__title h2{
+font-size: 48px;
+font-weight: 600;
+line-height: 56px;
+letter-spacing: -0.5px;
+text-transform: capitalize;
+margin-bottom: 16px;
+}
+.timeline__cover .timeline__title p{
+font-size: 18px;
+font-weight: 400;
+line-height: 28.8px;
+color: #959595;
+}
+
+.timeline__cover .timeline{
+padding-top: 64px;
+}
+.timeline__cover .timeline ul{
+padding-top: 100px;
+}
+.timeline__cover .timeline ul li {
+background: #9a9a9a;
+position: relative;
+margin: 0 auto;
+width: 2px;
+margin-bottom: 48px;
+list-style-type: none;
+}
+
+.timeline__cover .timeline ul li:last-child {
+padding-bottom: 7px;
+width: 0;
+height: 0;
+}
+
+.timeline__cover .timeline ul li:before {
+content: '';
+background: rgb(255, 2, 2);
+position: absolute;
+left: 50%;
+top: -32px;
+transform: translateX(-50%);
+-webkit-transform: translateX(-50%);
+width: 16px;
+height: 16px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+}
+
+.timeline__cover .timeline ul li .hidden {
+opacity: 0;
+}
+
+.timeline__cover .timeline ul li .content {
+position: relative;
+top: -100px;
+width: 289px;
+}
+
+.timeline__cover .timeline ul li .content .badge{
+font-size: 12px;
+line-height: 16px;
+text-transform: uppercase;
+/* color: #000000; */
+display: inline-block;
+padding: 6px 12px;
+/* background: #2dcd71; */
+border-radius: 1000px;
+}
+
+.timeline__cover .timeline ul li .content h3{
+font-size: 20px;
+font-weight: 600;
+line-height: 28px;
+color: #ffffff;
+margin: 16px 0 8px;
+}
+
+.timeline__cover .timeline ul li .content p{
+color: #acacac;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+}
+
+.timeline__cover .timeline ul li:nth-child(odd) .content {
+left: 20px;
+}
+
+.timeline__cover .timeline ul li:nth-child(odd) .content:before {
+left: -38px;
+}
+
+.timeline__cover .timeline ul li:nth-child(even) .content {
+left: calc(-289px - 70px);
+}
+
+.timeline__cover .timeline ul li:nth-child(even) .content:before {
+right: -38px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1020px) {
+.timeline__cover .timeline ul li .content {
+    width: 30vw;
+}
+
+.timeline__cover .timeline ul li:nth-child(even) .content {
+    left: calc(-30vw - 4px);
+}
+}
+
+@media screen and (max-width: 700px) {
+    .timeline__cover .timeline ul li .content {
+/* position: relative;
+top: -100px; */
+max-width: 289px;
+text-wrap: wrap;
+}
+    .timeline__cover .timeline ul li .content .badge{
+max-width: 10rem;
+text-wrap: wrap;
+}
+.timeline__cover {
+    padding: 32px 0;
+    /* background: #27272C; */
+}
+.timeline__cover .timeline__title {
+    text-align: left;
+}
+.timeline__cover .timeline {
+    padding-top: 32px;
+}
+.timeline__cover .timeline ul li {
+    margin-left: 48px !important;
+}
+.timeline__cover .timeline__title h2 {
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.08px;
+}
+.timeline__cover .timeline ul li {
+    margin-left: 20px;
+}
+
+.timeline__cover .timeline ul li .content {
+    width: calc(100vw - 100px);
+    transition: .2s;
+}
+
+.timeline__cover .timeline ul li .content p {
+    min-height: 10px;
+    text-wrap: wrap;
+}
+
+.timeline__cover .timeline ul li:nth-child(even) .content {
+    left: -30px;
+}
+
+.timeline__cover .timeline ul li:nth-child(even) .content:before {
+    left: -33px;
+}
+.timeline__cover .timeline ul li:nth-child(odd) .content {
+    left: -30px;
+}
+}
+
+
+
+
+
+
+
+/* timeline__cover ends */
+    
+</style>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 20rem; height: 20rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="index.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <h2 class="mb-2 text-white fa">SkyBridge Logistics</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active fa">Home</a>
+                <a href="about.html" class="nav-item nav-link fa">About</a>
+                <a href="service.html" class="nav-item nav-link fa">Services</a>
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div> -->
+                <a href="contact.html" class="nav-item nav-link fa">Contact</a>
+            </div>
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block fa"><i class="fa fa-headphones text-primary me-2"></i>+44 78 7445 3608</h4>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+   <!-- Carousel Start -->
+   <div class="container-fluid p-0 pb-5" style="overflow-y: hidden;">
+    <div class="owl-carousel header-carousel position-relative mb-5">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 27, 0.373);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown fa">Seamless Shipping & Reliable Solutions</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4 fa">Your Trusted Partner In<span class="fa text-primary">Logistics</span></h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2 fa">At SkyBridge Logistics, we provide seamless logistics and freight 
+                                solutions across the globe. Whether you need air, sea, or land transportation, 
+                                we ensure safe, on-time deliveries with unmatched customer service.</p>
+                                
+                                <div class="flex" style="display: flex;justify-content:flex-end;">
+                            <input type="text" class="form-control border-light form_input_data"
+                                    id="form_input_data"
+                                    style="padding: 15px;
+                                    border-top-left-radius: 1rem; 
+                                    border-bottom-left-radius: 1rem;" 
+                                    placeholder="Tracking Number">
+                                   <!-- <div class="position-absolute right-0 h-35"> -->
+                                    <button class="fa btn btn-primary px-3 track" 
+
+                                    style="min-height: 1rem; 
+                                    min-width: 10rem; 
+                                    border-top-right-radius: 1rem; 
+                                    border-bottom-right-radius: 1rem;
+                                   
+                                    ">
+                                    Track Shipment</button>
+                                   <!-- </div> -->
+                                </div>
+                        </div>
+                </div>
+            </div>
+            
+        </div>
+<!-- <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics Solution</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Place For Your <span class="text-primary">Transport</span> Solution</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tracking Id">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary px-3">Track & Trace</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3 fa">About Us</h6>
+                    <h1 class="mb-5 fa">Reliable and Efficient Transport and Logistics Solutions</h1>
+                    <p class="mb-5">At SkyBridge Logistics, we are more than just a freight company—we are your 
+                        trusted logistics partner. With years of experience in global shipping, freight forwarding, and supply chain management, 
+                        we ensure that your cargo reaches its destination safely, on time, and cost-effectively.</p>
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-globe fa-3x text-primary mb-3"></i>
+                            <h5 class="fa">Global Coverage</h5>
+                            <p class="m-0">We connect businesses to the world with our seamless global freight solutions. 
+                                Operating in 100+ countries, our extensive network ensures fast, secure, and cost-effective shipping via air, sea, and land. No matter the destination, 
+                                we deliver with precision, reliability, and efficiency—helping businesses expand beyond borders.</p>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                            <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
+                            <h5 class="fa">On Time Delivery</h5>
+                            <p class="m-0">We understand that time is money. That’s why we prioritize on-time deliveries, 
+                                ensuring your shipments reach their destination safely, efficiently, 
+                                and without delays. With our advanced logistics network, 
+                                real-time tracking, and reliable fleet, we guarantee prompt 
+                                and secure freight solutions—keeping your business moving forward.</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary py-3 px-5 fa">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3 fa">Some Facts</h6>
+                    <h1 class="mb-5 fa">Why Choose SkyBridge Logistics?</h1>
+                    <p class="mb-5">At SkyBridge Logistics, we deliver fast, reliable, and cost-effective freight solutions worldwide. 
+                        With 99% on-time delivery, real-time tracking, and 24/7 customer support, we ensure your cargo reaches its destination safely and efficiently. 
+                        Whether by air, sea, or land, trust us to keep your business moving forward.</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>Call for any query!</h6>
+                            <h3 class="fa text-primary m-0">+44 78 7445 3608</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-6">
+                            <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
+                                <i class="fa fa-users fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">7,192</h2>
+                                <p class="text-white mb-0 fa">Happy Clients</p>
+                            </div>
+                            <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">73,981</h2>
+                                <p class="text-white mb-0 fa">Complete Shipments</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
+                                <i class="fa fa-star fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">2,531</h2>
+                                <p class="text-white mb-0 fa">Customer Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase fa">Our Services</h6><br>
+                <h1 class="mb-5 fa">Explore Our Services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Air Freight</h4>
+                        <p>Our air freight services ensure fast deliveries worldwide, with real-time tracking and seamless customs clearance. 
+                            Whether it’s urgent cargo or high-value shipments, we guarantee speed, reliability, and safety every step of the way.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Ocean Freight</h4>
+                        <p>Our ocean freight services provide secure, efficient, and budget-friendly transportation for all types of cargo. 
+                            With global shipping routes, 
+                            flexible container options, and expert customs handling, we ensure smooth port-to-port and door-to-door delivery.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Road Freight</h4>
+                        <p>Our road freight services offer fast, secure, and cost-effective transportation for shipments of all sizes. 
+                            With a modern fleet, optimized routes, and real-time tracking, we ensure timely deliveries across local and international destinations.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-4.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Train Freight</h4>
+                        <p>Move your goods quickly, safely, and sustainably with our reliable train freight services. Ideal for bulk shipments and long-distance transport, 
+                            rail freight offers a cost-effective and eco-friendly solution for businesses worldwide.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-5.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Customs Clearance</h4>
+                        <p>Navigating customs can be complex—but with SkyBridge Logistics, it’s seamless. Our expert customs brokerage team ensures fast, compliant, 
+                            and hassle-free clearance for your shipments, minimizing delays and avoiding extra costs.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/service-6.jpg" alt="">
+                        </div>
+                        <h4 class="mb-3 fa">Warehouse Solutions</h4>
+                        <p>Optimize your supply chain with our state-of-the-art warehousing solutions. We offer secure storage, 
+                            inventory management, and seamless distribution, ensuring your goods are handled with care and efficiency.</p>
+                        <!-- <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Read More</span></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container feature py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3 fa">Our Features</h6>
+                    <h1 class="mb-5 fa">We Are Trusted Logistics Company Since 1991</h1>
+                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                        <i class="fa fa-globe text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5 class="fa">Worldwide Service</h5>
+                            <p class="mb-0">We provide comprehensive logistics solutions across every continent. Whether you need to ship by air, sea, or land, 
+                                our global network ensures safe, efficient, and on-time delivery anywhere in the world.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
+                        <i class="fa fa-shipping-fast text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5 class="fa">On Time Delivery</h5>
+                            <p class="mb-0">We know that timing is everything in logistics. 
+                                That’s why we guarantee on-time deliveries, ensuring your cargo reaches its destination safely and without delays.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
+                        <i class="fa fa-headphones text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5 class="fa">24/7 Telephone Support</h5>
+                            <p class="mb-0">We understand that logistics never sleep. That’s why our expert support team is available 24/7, 
+                                ready to assist you with tracking, shipping inquiries, and urgent requests—anytime, anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/2.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3 fa">Get A Quote</h6>
+                    <h1 class="mb-5 fa">Request A Free Quote!</h1>
+                    <p class="mb-5">Need a reliable shipping solution? Get a personalized freight quote tailored to your needs. 
+                        Whether it’s air, sea, or road transport, we ensure fast, secure, and cost-effective delivery worldwide.</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>Call for any query!</h6>
+                            <h3 class="text-primary m-0 fa">+44 78 7445 3608</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0 fa" placeholder="Your Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control border-0 fa" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0 fa" placeholder="Your Mobile" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0 fa" style="height: 55px;">
+                                        <option selected>Select A Freight</option>
+                                        <option value="1">Air Freight</option>
+                                        <option value="2">Ocean Freight</option>
+                                        <option value="3">Train Freight</option>
+                                        <option value="3">Road Freight</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0 fa" placeholder="Special Note"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3 fa" 
+                                    style="border-top-left-radius: 2rem; 
+                                    border-top-right-radius: 2rem; 
+                                    border-bottom-left-radius: 2rem; 
+                                    border-bottom-right-radius: 2rem;" 
+                                    type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase fa">Our Team</h6><br>
+                <h1 class="mb-5 fa">Expert Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0 fa">John Carter</h5>
+                        <p>CEO & Founder</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0 fa">David Johnson</h5>
+                        <p>Head of Freight Operations</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0 fa">Michael Adams</h5>
+                        <p>Chief Operations Officer</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0 fa">Mark Benson</h5>
+                        <p>Warehouse Manager</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase fa">Testimonial</h6><br>
+                <h1 class="mb-0 fa">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1 fa">Dr. Emily Foster</h5>
+                            <p class="m-0">Pharmaceutical Supplier</p>
+                        </div>
+                    </div>
+                    <p class="mb-0"> "We rely on SkyBridge Logistics for temperature-controlled shipments, 
+                        and they never disappoint. Their 24/7 support gives us peace of mind!"</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1 fa">Tom Harrison</h5>
+                            <p class="m-0">Managing Director, AutoParts Express</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Their customized logistics solutions have helped us reduce costs and optimize delivery routes. 
+                        We now deliver auto parts faster and more efficiently than ever!"</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1 fa">Michael Chen</h5>
+                            <p class="m-0">Operations Manager, Tech Imports Ltd.</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Their warehousing and distribution services have streamlined our inventory management,
+                         reducing delays and improving efficiency. Highly recommend!"</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1 fa">Laura Bennett</h5>
+                            <p class="m-0">Founder, Luxe Fashion Exports</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">"As an international fashion brand, timely delivery is critical. SkyBridge Logistics 
+                        provides seamless global shipping, making sure our collections reach customers worldwide on time!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4 fa">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Ocean Gate, Atlantic Way, Southampton, SO14 3QN, UK</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+44 78 7445 3608</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@skybridgelogistics.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4 fa">Services</h4>
+                    <a class="btn btn-link" href="service.html">Air Freight</a>
+                    <a class="btn btn-link" href="service.html">Sea Freight</a>
+                    <a class="btn btn-link" href="service.html">Road Freight</a>
+                    <a class="btn btn-link" href="service.html">Logistic Solutions</a>
+                    <a class="btn btn-link" href="service.html">Industry solutions</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4 fa">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <!-- <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4 fa">Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest shipping updates, 
+                        industry news, and exclusive offers delivered straight to your inbox!</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">SkyBridge Logistics</a>, All Right Reserved.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/items.js"></script>
+</body>
+
+</html>
